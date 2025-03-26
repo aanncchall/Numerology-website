@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Unlock Numerology</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Head Office</h3>
+                <p>F, 4, opposite Shopping Centre Road, Subhash Nagar, Jaipur, Rajasthan 302039</p>
+                <p>📞 +91 9057330555</p>
+                <p>📧 unlocknumerology@gmail.com</p>
+            </div>
+            <div class="contact-form">
+                <h3>Get in Touch</h3>
+                <form>
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Your message</label>
+                    <input type="message" id="message" name="message" required>
+
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="opening-hours">
+        <h2> Opening Hours</h2>
+        <p><strong>Monday:</strong> 11:00 – 18:00</p>
+        <p><strong>Tuesday:</strong> 11:00 – 18:00</p>
+        <p><strong>Wednesday:</strong> 11:00 – 18:00</p>
+        <p><strong>Thursday:</strong> 11:00 – 18:00</p>
+        <p><strong>Friday:</strong> 11:00 – 18:00</p>
+        <p><strong>Saturday:</strong> 11:00 – 18:00</p>
+        <p><strong>Sunday:</strong> CLOSED</p>
+    </section>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Thank you for reaching out! We will get back to you soon.");
+        });
+
+        let days = document.querySelectorAll(".day");
+        let currentDay = new Date().getDay();
+        if (currentDay === 0) {
+            days[6].classList.add("highlight");
+        } else {
+            days[currentDay - 1].classList.add("highlight");
+        }
+    </script>
+
+    
+    <div class="currency-switcher">
+        <button>INR</button>
+        <button>USD</button>
+    </div>
+    
+    <div class="whatsapp-button">
+        <a href="https://wa.me/9057330555" target="_blank">WhatsApp</a>
+    </div>
+    
+    <div class="currency-switcher">
+        <button style="background: #ff9999;">INR</button>
+        <button style="background: #000; color: white;">USD</button>
+    </div>
+    <div class="whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <footer>
+        <section class="footer-section">
+            <h3>Unlock Numerology</h3>
+            <p>A single session has the potential to significantly impact your life when facing issues in areas such as love life, marriage, children, business, parents, or any other aspect of your life.</p>
+            <div class="social-icons">
+                <a href="#">📘</a>
+                <a href="#">📷</a>
+                <a href="#">▶</a>
+            </div>
+        </section>
+        <nav class="footer-section">
+            <h3>Quick Links</h3>
+            <ul style="display: flex; flex-direction: column;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <nav class="footer-section">
+            <h3>Other Links</h3>
+            <ul style="display: flex; flex-direction: column;"> 
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Refund and Returns Policy</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Login / Signup</a></li>
+            </ul>
+        </nav>
+        <section class="footer-section">
+            <h3>Connect With Us</h3>
+            <address>
+                <p>📞 +91 9057330555</p>
+                <p>📧 unlocknumerology@gmail.com</p>
+            </address>
+        </section>
+    </footer>
+
+</body>
+</html>

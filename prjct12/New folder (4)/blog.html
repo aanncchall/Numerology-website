@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs – Unlock Numerology</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <!--<div class="logo">Unlock Numerology</div>-->
+            <ul class="nav-links">
+                <li><a href="#" class="logo">Unlock Numerology</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Blogs</h1>
+    </div>
+    <div class="blogs" id="blogContainer"></div>
+    <div class="blog-content-full" id="blogContentFull" style="display: none;"></div>
+
+    <script>
+        const blogs = [
+            {
+                image: "services1.jpg",
+                title: "The Scientific Foundations of Numerology",
+                date: "January 1, 2024",
+                comments: "No Comments",
+                content: "This is the full content of the blog post about the scientific foundations of numerology. It includes detailed explanations and insights into how numerology works and its scientific basis.",
+                video: "https://www.youtube.com/embed/J8OvJ9ziV6M"
+            },
+            {
+                image: "blg2.jpg",
+                title: "Vastu Shastra: The Global Triumph of Harmonious Living",
+                date: "January 1, 2024",
+                comments: "No Comments",
+                content: "This is the full content of the blog post about Vastu Shastra. It covers the principles of Vastu Shastra and how it has gained global recognition for promoting harmonious living.",
+                video: "https://www.youtube.com/embed/bvUNT4hP3UU"
+            },
+            {
+                image: "blg3.jpg",
+                title: "Numerology: Decoding the Path to Success in the Modern Era",
+                date: "January 1, 2024",
+                comments: "No Comments",
+                content: "This is the full content of the blog post about numerology in the modern era. It discusses how numerology can be used to achieve success and navigate the challenges of contemporary life.",
+                video: "https://www.youtube.com/embed/kX3kYjPwnc4"
+            }
+        ];
+
+        const blogContainer = document.getElementById("blogContainer");
+        const blogContentFull = document.getElementById("blogContentFull");
+
+        blogs.forEach((blog, index) => {
+            const blogCard = document.createElement("div");
+            blogCard.classList.add("blog-card");
+            blogCard.innerHTML = `
+                <img src="${blog.image}" alt="Blog Image">
+                <div class="blog-content">
+                    <div class="blog-title">${blog.title}</div>
+                    <div class="blog-meta">${blog.date} • ${blog.comments}</div>
+                    <a href="#" class="read-more" onclick="showFullContent(${index})">READ MORE</a>
+                </div>
+            `;
+            blogContainer.appendChild(blogCard);
+        });
+
+        function showFullContent(index) {
+            const blog = blogs[index];
+            blogContentFull.innerHTML = `
+                <h2>${blog.title}</h2>
+                <p>${blog.date} • ${blog.comments}</p>
+                <img src="${blog.image}" alt="Blog Image">
+                <p>${blog.content}</p>
+                <iframe width="560" height="315" src="${blog.video}" frameborder="0" allowfullscreen></iframe>
+                <a href="#" onclick="hideFullContent()">Back to Blogs</a>
+            `;
+            blogContainer.style.display = "none";
+            blogContentFull.style.display = "block";
+        }
+
+        function hideFullContent() {
+            blogContentFull.style.display = "none";
+            blogContainer.style.display = "block";
+        }
+    </script>
+
+    <footer>
+        <section class="footer-section">
+            <h3>Unlock Numerology</h3>
+            <p>A single session has the potential to significantly impact your life when facing issues in areas such as love life, marriage, children, business, parents, or any other aspect of your life.</p>
+            <div class="social-icons">
+                <a href="#">📘</a>
+                <a href="#">📷</a>
+                <a href="#">▶</a>
+            </div>
+        </section>
+        <nav class="footer-section">
+            <h3>Quick Links</h3>
+            <ul style="display: flex; flex-direction: column;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <nav class="footer-section">
+            <h3>Other Links</h3>
+            <ul style="display: flex; flex-direction: column;"> 
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Refund and Returns Policy</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Login / Signup</a></li>
+            </ul>
+        </nav>
+        <section class="footer-section">
+            <h3>Connect With Us</h3>
+            <address>
+                <p>📞 +91 9057330555</p>
+                <p>📧 unlocknumerology@gmail.com</p>
+            </address>
+        </section>
+    </footer>
+</body>
+</html>

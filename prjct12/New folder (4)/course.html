@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses – Unlock Numerology</title>
+    <link rel="stylesheet" href="course.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <!--<div class="logo">Unlock Numerology</div>-->
+            <ul class="nav-links">
+                <li><a href="#" class="logo">Unlock Numerology</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Courses</h1>
+    </div>
+    <div class="course-section">
+        <div class="course-card">
+            <img src="services2.jpg" alt="Numerology Professional Course">
+            <div class="course-title">Numerology Professional Course</div>
+            <div class="price">₹11,000.00</div>
+            <button class="btn" onclick="showDetails()">Add To Cart</button>
+            <div class="course-details" id="course-details" style="display: none;">
+                <p>This course covers advanced numerology techniques and professional practices. It includes:</p>
+                <ul>
+                    <li>Comprehensive study materials</li>
+                    <li>Interactive sessions with experts</li>
+                    <li>Certification upon completion</li>
+                    <li>Lifetime access to course content</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="currency-switcher">
+        <button style="background: #ff9999;">INR</button>
+        <button style="background: #000; color: white;">USD</button>
+    </div>
+    <div class="whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+    <footer>
+        <section class="footer-section">
+            <h3>Unlock Numerology</h3>
+            <p>A single session has the potential to significantly impact your life when facing issues in areas such as love life, marriage, children, business, parents, or any other aspect of your life.</p>
+            <div class="social-icons">
+                <a href="#">📘</a>
+                <a href="#">📷</a>
+                <a href="#">▶</a>
+            </div>
+        </section>
+        <nav class="footer-section">
+            <h3>Quick Links</h3>
+            <ul style="display: flex; flex-direction: column;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <nav class="footer-section">
+            <h3>Other Links</h3>
+            <ul style="display: flex; flex-direction: column;"> 
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Refund and Returns Policy</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Login / Signup</a></li>
+            </ul>
+        </nav>
+        <section class="footer-section">
+            <h3>Connect With Us</h3>
+            <address>
+                <p>📞 +91 9057330555</p>
+                <p>📧 unlocknumerology@gmail.com</p>
+            </address>
+        </section>
+    </footer>
+
+    <script>
+        function showDetails() {
+            var details = document.getElementById("course-details");
+            if (details.style.display === "none") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
